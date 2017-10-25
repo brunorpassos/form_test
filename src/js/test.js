@@ -1,1 +1,0 @@
-export var teste = "us on the tape";
