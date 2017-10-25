@@ -1,0 +1,25 @@
+{
+  "name": "form_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack-dev-server",
+    "build:production": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunorpassos/form_test.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunorpassos/form_test/issues"
+  },
+  "homepage": "https://github.com/brunorpassos/form_test#readme",
+  "devDependencies": {
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
+  }
+}
