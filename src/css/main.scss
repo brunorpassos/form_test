@@ -16,6 +16,23 @@
   margin: 10px;
 }
 
+.form-file-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.form-image-upload {
+  display: flex;
+  align-items: center;
+}
+
 .form-label {
   font-family: $default-font;
   position: relative;
@@ -40,5 +57,19 @@
   &:focus {
     transition: border-bottom 0.3s;
     border-bottom: solid 2px $default-color-active;
+  }
+}
+
+.form-submit {
+  height: 48px;
+  border: 0;
+  color: $submit-default-color;
+  background-color: $submit-default-background;
+  border-radius: 24px;
+  font-size: 18px;
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
   }
 }
