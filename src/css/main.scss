@@ -1,9 +1,44 @@
 @import "colors";
+@import "fonts";
 
-.test1 {
-  color: $main;
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 350px;
+  min-width: 260px;
 }
 
-.test2 {
-  color: $secondary;
+.form-element {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.form-label {
+  font-family: $default-font;
+  position: relative;
+  transition: top 0.3s, font-size 0.3s, color 0.3s;
+  top: 22px;
+  color: $default-color;
+
+  &.active-label {
+    transition: top 0.3s, font-size 0.3s, color 0.3s;
+    top: 2px;
+    font-size: $font-size-active;
+    color: $default-color-active;
+  }
+}
+
+.form-input {
+  border: 0;
+  border-bottom: solid 1px $default-color;
+  outline: none;
+  line-height: 30px;
+
+  &:focus {
+    transition: border-bottom 0.3s;
+    border-bottom: solid 2px $default-color-active;
+  }
 }
