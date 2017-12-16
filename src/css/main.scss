@@ -1,9 +1,88 @@
 @import "colors";
+@import "fonts";
 
-.test1 {
-  color: $main;
+* {
+  font-family: $default-font;
 }
 
-.test2 {
-  color: $secondary;
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 350px;
+  min-width: 260px;
+}
+
+.form-element {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 10px;
+  height: 60px;
+}
+
+.form-file-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+
+  .image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: solid 3px $default-color;
+  }
+}
+
+.form-image-upload {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $default-color;
+  &:hover {
+    color: $default-color-active;
+  }
+}
+
+.form-label {
+  position: relative;
+  transition: top 0.3s, font-size 0.3s, color 0.3s;
+  top: 22px;
+  color: $default-color;
+
+  &.active-label {
+    transition: top 0.3s, font-size 0.3s, color 0.3s;
+    top: 2px;
+    font-size: $font-size-active;
+    color: $default-color-active;
+    line-height: 20px;
+  }
+}
+
+.form-input {
+  border: 0;
+  border-bottom: solid 1px $default-color;
+  outline: none;
+  line-height: 30px;
+
+  &:focus {
+    border-bottom: solid 2px $default-color-active;
+  }
+}
+
+.form-submit {
+  height: 48px;
+  border: 0;
+  color: $submit-default-color;
+  background-color: $submit-default-background;
+  border-radius: 24px;
+  font-size: 18px;
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

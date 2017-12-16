@@ -1,17 +1,23 @@
 import "../css/main.scss"
 import { formData } from "./data";
+import { FormCreator } from "./form";
 
+let formId = "sign-in-form"
 
-debugger;
-var form = document.createElement("form");
-document.getElementById("app").append(form);
+// Basta passar o Id do elemento onde o formulário será inserido e o Id do Formulário.
 
-for(var i = 0; i < formData.length; i++) {
-  var formElement = document.createElement("input");
-  debugger;
-  formElement.id = formData[i].id;
-  formElement.name = formData[i].name;
-  formElement.placeholder = formData[i].placeholder;
-  formElement.type = formData[i].type;
-  form.appendChild(formElement);
-}
+let formCreate = new FormCreator("app", formId);
+
+formData.map(function(currentItem, i, formData) {
+  switch(currentItem.type) {
+    case "file":
+      formCreate.inputFileField(currentItem, formId);
+      break;
+    case "submit":
+      formCreate.submitBtnBuild(currentItem, formId);
+      break;
+    default:
+      formCreate.inputTextField(currentItem, formId);
+      formCreate.setFocusEventListener(currentItem.id);
+  }
+})  
